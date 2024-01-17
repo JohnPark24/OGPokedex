@@ -11,10 +11,15 @@ body {
   text-align: center;
   background: linear-gradient(to bottom, #6ab7f5, #fff);
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 2%;
   padding: 15px;
   position: relative;
@@ -22,36 +27,37 @@ main {
 
 .pokedex {
   width: 100%;
-  max-width: 425px;
+  max-width: 1600px;
 }
 
 .pokemon__image {
   position: absolute;
-  bottom: 55%;
-  left: 50%;
+  bottom: 40%;
+  left: 30%;
   transform: translate(-63%, 20%);
   height: 18%;
 }
 
 .pokemon__data {
+  width: 31%;
+  height: 13.5%;
   position: absolute;
-  font-weight: 600;
+  font-weight: 400;
   color: #aaa;
-  top: 54.5%;
-  right: 27%;
-  font-size: clamp(8px, 5vw, 25px);
+  top: 43%;
+  right: 8.7%;
+  font-size: clamp(20px, 5vw, 1rem);
+  overflow-y: auto;
 }
 
 .pokemon__name {
-  color: #3a444d;
+  color: #aaa;
   text-transform: capitalize;
 }
 
 .form {
-  position: absolute;
   width: 65%;
-  top: 65%;
-  left: 13.5%;
+  margin-bottom: 5%;
 }
 
 .input__search {
@@ -63,29 +69,31 @@ main {
   font-weight: 600;
   color: #3a444d;
   font-size: clamp(8px, 5vw, 1rem);
-  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
 }
 
 .buttons {
   position: absolute;
-  bottom: 10%;
-  left: 50%;
-  width: 65%;
-  transform: translate(-57%, 0);
+  top: 53.5%;
+  width: 30.8%;
+  height: 10%;
+  right: 8.7%;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5%; /* Adjust as needed */
 }
 
 .button {
-  width: 50%;
-  padding: 4%;
-  border: 2px solid #000;
-  border-radius: 5px;
+  flex-grow: 1;
+  width: 11.2%;
+  padding: 2.4% 14% 2.1% 3%;
+  border: 0px solid #000;
   font-size: clamp(8px, 5vw, 1rem);
   font-weight: 600;
-  color: white;
-  background-color: #444;
-  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  color: black;
+  background-color: transparent;
+  text-align: center;
 }
 
 .button:active {
